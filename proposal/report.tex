@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{graphicx}
+\graphicspath{{Images/}}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{subcaption}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\begin{document}
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.1mm}} 
+\center % Center everything on the page
+ 
+%---------------------------------------------------------------------------------
+%	HEADING SECTIONS (Enter the Homework/assignment No., only)
+%---------------------------------------------------------------------------------
+\textsc{\Large CS622A}\\[0.4cm] % heading course Number
+\textsc{\Large Advanced Computer Architecture}\\[0.4cm] % heading course name
+\textsc{\large Project Proposal }\\[0.4cm] % Minor heading
+%---------------------------------------------------------------------------------
+%	TITLE SECTION (Replace 'TITLE' with the Homework/assignment Name/title)
+%---------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \Large \bfseries Evaluating Data Prefetching techniques from DPC3}\\[0.1cm] % Title of your Homework/assignment
+\HRule \\[0.5cm]
+{ \large \bfseries GROUP 16}\\[1cm]
+ 
+%---------------------------------------------------------------------------------
+%	AUTHOR SECTION (EDIT THE NAME and T.NO., only)
+%---------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+
+% \emph{Author 1 :}\\
+\emph{Aditya Rohan}\\160053  % Enter Your name and T.No.
+\end{flushleft}
+\begin{flushleft} \large
+
+% \emph{Author 2:}\\
+\emph{Aniket Pandey}\\160113  % Enter Your name and T.No.
+\end{flushleft}
+
+
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Instructor:} \\
+Dr. Mainak Chaudhury % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[1cm]
+{\large \today}\\[1cm] % Date
+\includegraphics[width=\textwidth,height=6cm,keepaspectratio]{iitk.png}% \\[0.5cm] % 
+\vfill % Fill the rest of the page with white-space
+
+\end{titlepage}
+\newpage
+
+\section{Problem Statement}
+\input{Chapters/02_Introduction}
+
+\section{Expected Outcomes}
+\input{Chapters/04_Results}
+
+\section{Tools to Use}
+\input{Chapters/05_DiscussionsConclusion}
+\end{document}

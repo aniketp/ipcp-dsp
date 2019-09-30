@@ -1,0 +1,17 @@
+.vscode
+process
+simulate
+fa-lru
+fa-min
+
+# Latex logs
+report.aux
+report.lof
+report.log
+report.lot
+report.out
+report.synctex.gz
+
+# Directories
+output
+traces
