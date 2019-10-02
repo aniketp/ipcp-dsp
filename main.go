@@ -16,6 +16,7 @@ import (
 	"os"
 	"os/exec"
 	"path"
+	"strings"
 )
 
 type prefetch struct {
@@ -82,18 +83,19 @@ func copyFileContents(src, dst string) (err error) {
 
 // Build CPUs corresponding to each prefetcher
 func buildCPUs(currDir string) error {
-	prefetchDir := currDir + "/../champsim/prefetcher/"
+	prefetchDir := currDir + "/champsim/prefetcher/"
 	cleanPrefetchers(prefetchDir)
 	for _, prefetcher := range prefetchers {
 		// Move prefetching algorithms for L1, L2, LLC to champsim
-		fileDir := currDir + "/../prefetchers/" + prefetcher.name + "/"
+		fileDir := currDir + "/prefetchers/" + prefetcher.name + "/"
 		files, err := ioutil.ReadDir(fileDir)
 		if err != nil {
 			return err
 		}
 		for _, file := range files {
+			destFile := strings.TrimSuffix(prefetchDir+file.Name(), ".cpp")
 			if err := copyFileContents(fileDir+file.Name(),
-				prefetchDir+file.Name()); err != nil {
+				destFile); err != nil {
 				return err
 			}
 		}
@@ -103,14 +105,15 @@ func buildCPUs(currDir string) error {
 		fmt.Println("Building executable: " + executable)
 		cmd := exec.Command("./build_champsim.sh", "perceptron",
 			prefetcher.l1d, prefetcher.l2c, prefetcher.llc, "lru", "1")
-		cmd.Dir = currDir + "/../champsim/"
+		cmd.Dir = currDir + "/champsim/"
 		if err := cmd.Run(); err != nil {
 			fmt.Println(cmd.Dir)
 			return err
 		}
 		// Remove prefetchers
 		for _, file := range files {
-			err := os.Remove(prefetchDir + file.Name())
+			destFile := strings.TrimSuffix(prefetchDir+file.Name(), ".cpp")
+			err := os.Remove(destFile)
 			if err != nil {
 				return err
 			}
