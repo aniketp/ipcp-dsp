@@ -22,22 +22,21 @@ import (
 type prefetch struct {
 	name          string
 	l1d, l2c, llc string
-	coreName      string
 }
 
-var prefetchers []prefetch
+// var prefetchers []prefetch
 
 func main() {
 	// Initialize info about all prefetchers
-	prefetchers = []prefetch{
-		{"berti", "berti+", "berti", "next_line_no", ""},
-		{"bingo", "bingo_dpc3", "next_line", "next_line", ""},
-		{"bouquet", "ipcp", "ipcp", "ipcp", ""},
-		{"enhancing", "team_12", "team_12", "team_12", ""},
-		{"multi-lop", "mlop_dpc3", "next_line", "next_line", ""},
-		{"pangloss", "pangloss", "pangloss", "no", ""},
-		{"sangam", "sangam_dpc3", "sangam_dpc3", "sangam_dpc3", ""},
-		{"t-skid", "spp", "spp", "no", ""},
+	prefetchers := []prefetch{
+		{"berti", "berti+", "berti", "next_line_no"},
+		{"bingo", "bingo_dpc3", "next_line", "next_line"},
+		{"bouquet", "ipcp", "ipcp", "ipcp"},
+		{"enhancing", "team_12", "team_12", "team_12"},
+		{"multi-lop", "mlop_dpc3", "next_line", "next_line"},
+		{"pangloss", "pangloss", "pangloss", "no"},
+		{"sangam", "sangam_dpc3", "sangam_dpc3", "sangam_dpc3"},
+		{"t-skid", "spp", "spp", "no"},
 	}
 
 	// Need current directory to build single-core CPUs
@@ -45,8 +44,13 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if err := buildCPUs(currDir); err != nil {
-		log.Fatal("Could not build champsim CPUs\n" + err.Error())
+	if len(os.Args) == 1 {
+		if err := buildCPUs(currDir, prefetchers); err != nil {
+			log.Fatal("Could not build champsim CPUs\n" + err.Error())
+		}
+	}
+	if err := runTraces(currDir, prefetchers); err != nil {
+		log.Fatal("Could not run simulation\n" + err.Error())
 	}
 
 }
@@ -83,7 +87,7 @@ func copyFileContents(src, dst string) (err error) {
 }
 
 // Build CPUs corresponding to each prefetcher
-func buildCPUs(currDir string) (err error) {
+func buildCPUs(currDir string, prefetchers []prefetch) (err error) {
 	prefetchDir := currDir + "/champsim/prefetcher/"
 	cleanPrefetchers(prefetchDir)
 	for _, prefetcher := range prefetchers {
@@ -101,9 +105,9 @@ func buildCPUs(currDir string) (err error) {
 			}
 		}
 
-		prefetcher.coreName = "perceptron-" + prefetcher.l1d + "-" +
+		coreName := "perceptron-" + prefetcher.l1d + "-" +
 			prefetcher.l2c + "-" + prefetcher.llc + "-lru-1core"
-		fmt.Println("Building executable: " + prefetcher.coreName)
+		fmt.Println("Building executable: " + coreName)
 		cmd := exec.Command("./build_champsim.sh", "perceptron",
 			prefetcher.l1d, prefetcher.l2c, prefetcher.llc, "lru", "1")
 		cmd.Dir = currDir + "/champsim/"
@@ -123,17 +127,18 @@ func buildCPUs(currDir string) (err error) {
 }
 
 // Run Champsim simulator on all traces for all submissions
-func runTraces(currDir string) (err error) {
+func runTraces(currDir string, prefetchers []prefetch) (err error) {
 	traceDir := currDir + "/champsim/dpc3_traces/"
 	files, err := ioutil.ReadDir(traceDir)
 	if err != nil {
 		log.Fatal(err)
 	}
 	for _, prefetcher := range prefetchers {
+		coreName := "perceptron-" + prefetcher.l1d + "-" +
+			prefetcher.l2c + "-" + prefetcher.llc + "-lru-1core"
 		for _, traceFile := range files {
-			fmt.Println("Running " + prefetcher.coreName +
-				" on " + traceFile.Name())
-			cmd := exec.Command("./run_champsim.sh", prefetcher.coreName,
+			fmt.Println("Running " + coreName + " on " + traceFile.Name())
+			cmd := exec.Command("./run_champsim.sh", coreName,
 				"1", "10", traceFile.Name())
 			cmd.Dir = currDir + "/champsim/"
 			if err := cmd.Run(); err != nil {
@@ -141,4 +146,22 @@ func runTraces(currDir string) (err error) {
 			}
 		}
 	}
+	// Move all results to current directory
+	resultDir := currDir + "/champsim/results_10M/"
+	resultFiles, err := ioutil.ReadDir(resultDir)
+	if err != nil {
+		return err
+	}
+	finalDir := currDir + "/results/"
+	if err := os.Mkdir(finalDir, os.ModePerm); err != nil {
+		return err
+	}
+	for _, file := range resultFiles {
+		if err := copyFileContents(resultDir+file.Name(),
+			finalDir+file.Name()); err != nil {
+			return err
+		}
+	}
+	fmt.Println("\nAll result files stored in " + finalDir + " directory")
+	return nil
 }
