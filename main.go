@@ -153,9 +153,7 @@ func runTraces(currDir string, prefetchers []prefetch) (err error) {
 		return err
 	}
 	finalDir := currDir + "/results/"
-	if err := os.Mkdir(finalDir, os.ModePerm); err != nil {
-		return err
-	}
+	os.Mkdir(finalDir, os.ModePerm)
 	for _, file := range resultFiles {
 		if err := copyFileContents(resultDir+file.Name(),
 			finalDir+file.Name()); err != nil {

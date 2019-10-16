@@ -1,0 +1,80 @@
+
+*** ChampSim Multicore Out-of-Order Simulator ***
+
+Warmup Instructions: 1000000
+Simulation Instructions: 10000000
+Number of CPUs: 1
+LLC sets: 2048
+LLC ways: 16
+Off-chip DRAM Size: 4096 MB Channels: 1 Width: 64-bit Data Rate: 3200 MT/s
+
+CPU 0 runs /home/aniket/Desktop/sem/cs622/cs622-project/champsim/dpc3_traces/605.mcf_s-665B.champsimtrace.xz
+CPU 0 L2C next line prefetcher
+LLC Next Line Prefetcher
+
+Warmup complete CPU 0 instructions: 1000004 cycles: 997249 (Simulation time: 0 hr 0 min 1 sec) 
+
+Heartbeat CPU 0 instructions: 10000000 cycles: 36982254 heartbeat IPC: 0.2704 cumulative IPC: 0.250104 (Simulation time: 0 hr 0 min 25 sec) 
+Finished CPU 0 instructions: 10000000 cycles: 39960479 cumulative IPC: 0.250247 (Simulation time: 0 hr 0 min 28 sec) 
+
+CPU 0 Branch Prediction Accuracy: 90.2713% MPKI: 19.1034 Average ROB Occupancy at Mispredict: 50.7335
+
+ChampSim completed all CPUs
+
+Region of Interest Statistics
+
+CPU 0 cumulative IPC: 0.250247 instructions: 10000000 cycles: 39960479
+L1D TOTAL     ACCESS:    4433056  HIT:    3512406  MISS:     920650
+L1D LOAD      ACCESS:    2741266  HIT:    2473256  MISS:     268010
+L1D RFO       ACCESS:    1076028  HIT:    1038484  MISS:      37544
+L1D PREFETCH  ACCESS:     615762  HIT:        666  MISS:     615096
+L1D WRITEBACK ACCESS:          0  HIT:          0  MISS:          0
+L1D PREFETCH  REQUESTED:     779058  ISSUED:     779058  USEFUL:     100614  USELESS:     567484
+L1D AVERAGE MISS LATENCY: 50753.1 cycles
+L1I TOTAL     ACCESS:    2006359  HIT:    2006359  MISS:          0
+L1I LOAD      ACCESS:    2006359  HIT:    2006359  MISS:          0
+L1I RFO       ACCESS:          0  HIT:          0  MISS:          0
+L1I PREFETCH  ACCESS:          0  HIT:          0  MISS:          0
+L1I WRITEBACK ACCESS:          0  HIT:          0  MISS:          0
+L1I PREFETCH  REQUESTED:          0  ISSUED:          0  USEFUL:          0  USELESS:          0
+L1I AVERAGE MISS LATENCY: -nan cycles
+L2C TOTAL     ACCESS:    1304405  HIT:     422970  MISS:     881435
+L2C LOAD      ACCESS:     265611  HIT:     100355  MISS:     165256
+L2C RFO       ACCESS:      37544  HIT:       7812  MISS:      29732
+L2C PREFETCH  ACCESS:     949632  HIT:     263232  MISS:     686400
+L2C WRITEBACK ACCESS:      51618  HIT:      51571  MISS:         47
+L2C PREFETCH  REQUESTED:     291933  ISSUED:     285516  USEFUL:      44852  USELESS:     697651
+L2C AVERAGE MISS LATENCY: 176.117 cycles
+LLC TOTAL     ACCESS:     932798  HIT:     398343  MISS:     534455
+LLC LOAD      ACCESS:     163432  HIT:      72303  MISS:      91129
+LLC RFO       ACCESS:      29704  HIT:      24127  MISS:       5577
+LLC PREFETCH  ACCESS:     699308  HIT:     261618  MISS:     437690
+LLC WRITEBACK ACCESS:      40354  HIT:      40295  MISS:         59
+LLC PREFETCH  REQUESTED:     180720  ISSUED:     177872  USEFUL:      26898  USELESS:     433500
+LLC AVERAGE MISS LATENCY: 240.702 cycles
+Major fault: 0 Minor fault: 3007
+=== CPU 0 L1D Prefetcher Statistics ===
+[MLOP] History of tracked zone:
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIAIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIAIIIIIIIIAIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIAIIIIIIIIIIIIAIIIIIIIIAIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIAIIIIIIIIIIIIAIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIAIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+[MLOP] Prefetch Degree Mean: 7.97632
+[MLOP] Prefetch Degree SD: 6.30475
+[MLOP] Max Score Left Mean (%): 31.824
+[MLOP] Max Score Left SD (%): 17.6104
+[MLOP] Max Score Right Mean (%): 49.1424
+[MLOP] Max Score Right SD (%): 16.9457
+CPU 0 L2C next line prefetcher final stats
+LLC Next Line Prefetcher Final Stats: none
+
+DRAM Statistics
+ CHANNEL 0
+ RQ ROW_BUFFER_HIT:      66147  ROW_BUFFER_MISS:     467291
+ DBUS_CONGESTED:     219329
+ WQ ROW_BUFFER_HIT:       4046  ROW_BUFFER_MISS:       7484  FULL:          0
+
+ AVG_CONGESTED_CYCLE: 6

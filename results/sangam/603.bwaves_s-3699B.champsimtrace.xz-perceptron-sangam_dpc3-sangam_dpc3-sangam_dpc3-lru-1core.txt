@@ -14,8 +14,8 @@ CPU 0 L2C IP-delta,IP stride,NL prefetcher
 
 Warmup complete CPU 0 instructions: 1000003 cycles: 684869 (Simulation time: 0 hr 0 min 1 sec) 
 
-Heartbeat CPU 0 instructions: 10000000 cycles: 10315596 heartbeat IPC: 0.969406 cumulative IPC: 0.934509 (Simulation time: 0 hr 0 min 13 sec) 
-Finished CPU 0 instructions: 10000000 cycles: 10692488 cumulative IPC: 0.935236 (Simulation time: 0 hr 0 min 15 sec) 
+Heartbeat CPU 0 instructions: 10000000 cycles: 10315596 heartbeat IPC: 0.969406 cumulative IPC: 0.934509 (Simulation time: 0 hr 0 min 14 sec) 
+Finished CPU 0 instructions: 10000000 cycles: 10692488 cumulative IPC: 0.935236 (Simulation time: 0 hr 0 min 16 sec) 
 
 CPU 0 Branch Prediction Accuracy: 91.2893% MPKI: 12.4324 Average ROB Occupancy at Mispredict: 77.1521
 

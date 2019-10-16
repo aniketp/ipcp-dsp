@@ -14,10 +14,10 @@ Ultra pref. initialized
 Ultra pref. initializing...
 Ultra pref. initialized
 
-Warmup complete CPU 0 instructions: 1000003 cycles: 684882 (Simulation time: 0 hr 0 min 2 sec) 
+Warmup complete CPU 0 instructions: 1000003 cycles: 684882 (Simulation time: 0 hr 0 min 1 sec) 
 
-Heartbeat CPU 0 instructions: 10000000 cycles: 10315986 heartbeat IPC: 0.969369 cumulative IPC: 0.934472 (Simulation time: 0 hr 0 min 15 sec) 
-Finished CPU 0 instructions: 10000000 cycles: 10692936 cumulative IPC: 0.935197 (Simulation time: 0 hr 0 min 16 sec) 
+Heartbeat CPU 0 instructions: 10000000 cycles: 10315986 heartbeat IPC: 0.969369 cumulative IPC: 0.934472 (Simulation time: 0 hr 0 min 14 sec) 
+Finished CPU 0 instructions: 10000000 cycles: 10692936 cumulative IPC: 0.935197 (Simulation time: 0 hr 0 min 15 sec) 
 
 CPU 0 Branch Prediction Accuracy: 91.2893% MPKI: 12.4324 Average ROB Occupancy at Mispredict: 77.1521
 

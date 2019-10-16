@@ -15,7 +15,7 @@ LLC Next Line Prefetcher
 Warmup complete CPU 0 instructions: 1000003 cycles: 684923 (Simulation time: 0 hr 0 min 1 sec) 
 
 Heartbeat CPU 0 instructions: 10000000 cycles: 10316039 heartbeat IPC: 0.969364 cumulative IPC: 0.934471 (Simulation time: 0 hr 0 min 13 sec) 
-Finished CPU 0 instructions: 10000000 cycles: 10692948 cumulative IPC: 0.935196 (Simulation time: 0 hr 0 min 15 sec) 
+Finished CPU 0 instructions: 10000000 cycles: 10692948 cumulative IPC: 0.935196 (Simulation time: 0 hr 0 min 14 sec) 
 
 CPU 0 Branch Prediction Accuracy: 91.2893% MPKI: 12.4324 Average ROB Occupancy at Mispredict: 77.1521
 
