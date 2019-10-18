@@ -38,6 +38,7 @@ func main() {
 		{"next-line", "next_line", "next_line", "next_line"},
 		{"pangloss", "pangloss", "pangloss", "no"},
 		{"sangam", "sangam_dpc3", "sangam_dpc3", "sangam_dpc3"},
+		{"sangam++", "cs622_sangam++", "cs622_sangam++", "cs622_sangam++"},
 		{"t-skid", "spp", "spp", "no"},
 	}
 
