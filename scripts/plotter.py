@@ -24,7 +24,8 @@ for root, dirs, files in sorted(os.walk(directory)):
 						ipc.append(x)
 				num = float(''.join(map(str,ipc)))
 				# d[file[:3]].append(root[11:] +":"+ str(num))
-				d[file[:3]].append(num)
+				ind = file.find('B.')
+				d[file[:ind+1]].append(num)
 		continue		
 
 for key, value in sorted(d.iteritems()) :
@@ -45,8 +46,8 @@ for key, value in sorted(d.iteritems()) :
 		# print value
 		min_value = 0.56175
 	if key == '648':
-		print min_value, max_value
-		print value
+		# print min_value, max_value
+		# print value
 		min_value = 1.6117	
 	# min_value = round(min_value, 2) - 0.001
 	# max_value = max_value + 0.01
@@ -58,10 +59,10 @@ for key, value in sorted(d.iteritems()) :
 	ax.set_ylim([min_value,max_value])
 	plt.xticks(x, prefetchers,rotation=30, fontsize=8)
 	# plt.yticks(np.arange(min_value, max_value, 0.001))
-	plt.bar(x, value)
+	plt.plot(x, value)
 	plt.xlabel('Prefetchers from DPC3',fontsize=14)
 	plt.ylabel('Cumulative IPC',fontsize=14)
-	title = "Benchmark number: "+key
+	title = "Benchmark: "+key
 	fig.suptitle(title,fontsize=15)
 
 	plt.savefig(key+'.pdf',bbox_inches = "tight")
