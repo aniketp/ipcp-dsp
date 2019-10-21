@@ -5,12 +5,14 @@ fa-lru
 fa-min
 
 # Latex logs
-report.aux
-report.lof
-report.log
-report.lot
-report.out
-report.synctex.gz
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
 
 # Directories
 output
