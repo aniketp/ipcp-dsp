@@ -205,15 +205,15 @@ if(cache_hit == 0)
     num_misses[cpu] += 1;
 
 // update spec nl bit when num misses crosses certain threshold
-if(num_misses[cpu] == 256){
-    mpkc[cpu] = ((float) num_misses[cpu]/(current_core_cycle[cpu]-prev_cpu_cycle[cpu]))*1000;
-    prev_cpu_cycle[cpu] = current_core_cycle[cpu];
-    if(mpkc[cpu] > spec_nl_threshold)
-        spec_nl[cpu] = 0;
-    else
-        spec_nl[cpu] = 1;
-    num_misses[cpu] = 0;
-}
+// if(num_misses[cpu] == 256){
+//     mpkc[cpu] = ((float) num_misses[cpu]/(current_core_cycle[cpu]-prev_cpu_cycle[cpu]))*1000;
+//     prev_cpu_cycle[cpu] = current_core_cycle[cpu];
+//     if(mpkc[cpu] > spec_nl_threshold)
+//         spec_nl[cpu] = 0;
+//     else
+//         spec_nl[cpu] = 1;
+//     num_misses[cpu] = 0;
+// }
 
 // calculate the index bit
     int index = ip & ((1 << NUM_IP_INDEX_BITS)-1);
@@ -246,12 +246,13 @@ if(num_misses[cpu] == 256){
 
     // calculate the stride between the current address and the last address
     int64_t stride = 0;
-    if (cl_offset > trackers_l1[cpu][index].last_cl_offset)
-        stride = cl_offset - trackers_l1[cpu][index].last_cl_offset;
-    else {
-        stride = trackers_l1[cpu][index].last_cl_offset - cl_offset;
-        stride *= -1;
-    }
+    // if (cl_offset > trackers_l1[cpu][index].last_cl_offset)
+    //     stride = cl_offset - trackers_l1[cpu][index].last_cl_offset;
+    // else {
+    //     stride = trackers_l1[cpu][index].last_cl_offset - cl_offset;
+    //     stride *= -1;
+    // }
+    stride = cl_offset - trackers_l1[cpu][index].last_cl_offset;
 
     // don't do anything if same address is seen twice in a row
     if (stride == 0)
@@ -359,12 +360,12 @@ cout << trackers_l1[cpu][index].last_stride << ", " << stride << ", " << tracker
     } 
 
 // if no prefetches are issued till now, speculatively issue a next_line prefetch
-if(num_prefs == 0 && spec_nl[cpu] == 1){                                        // NL IP
-    uint64_t pf_address = ((addr>>LOG2_BLOCK_SIZE)+1) << LOG2_BLOCK_SIZE;  
-    metadata = encode_metadata(1, NL_TYPE, spec_nl[cpu]);
-    prefetch_line(ip, addr, pf_address, FILL_L1, metadata);
-    SIG_DP(cout << "1, ");
-}
+// if(num_prefs == 0 && spec_nl[cpu] == 1){                                        // NL IP
+//     uint64_t pf_address = ((addr>>LOG2_BLOCK_SIZE)+1) << LOG2_BLOCK_SIZE;  
+//     metadata = encode_metadata(1, NL_TYPE, spec_nl[cpu]);
+//     prefetch_line(ip, addr, pf_address, FILL_L1, metadata);
+//     SIG_DP(cout << "1, ");
+// }
 
 SIG_DP(cout << endl);
 

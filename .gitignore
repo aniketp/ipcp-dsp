@@ -19,3 +19,4 @@ output
 traces
 champsim
 prefetchers/sangam++
+prefetchers/bouquet/ipcp++.l1d_pref.cpp
