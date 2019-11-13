@@ -1,0 +1,434 @@
+
+*** ChampSim Multicore Out-of-Order Simulator ***
+
+Warmup Instructions: 1000000
+Simulation Instructions: 10000000
+Number of CPUs: 1
+LLC sets: 2048
+LLC ways: 16
+Off-chip DRAM Size: 4096 MB Channels: 1 Width: 64-bit Data Rate: 3200 MT/s
+
+CPU 0 runs /home/light/7th-Sem/cs622/project/ChampSim/dpc3_traces/621.wrf_s-575B.champsimtrace.xz
+2:11:4
+0:-1
+1:9:4
+-1:-1
+1:2:3
+-1:-1
+0:2:2
+-1:-1
+3:2:1
+0:-1
+6:9:1
+1:-1
+10:4:1
+2:1
+13:5:3
+2:1
+0:6:5
+-1:1
+0:0:5
+-1:-1
+0:0:4
+-1:-1
+0:1:3
+-1:-1
+0:1:2
+-1:-1
+0:1:1
+-1:-1
+2:1:1
+0:-1
+0:1:1
+-1:-1
+3:0:1
+0:-1
+1:1:1
+-1:-1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+7:9:1
+1:-1
+0:7:1
+-1:1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+1:0:1
+-1:-1
+0:1:1
+-1:-1
+15:12:1
+2:1
+15:15:3
+2:1
+14:16:5
+2:1
+0:10:7
+-1:1
+0:1:7
+-1:-1
+0:0:6
+-1:-1
+
+Warmup complete CPU 0 instructions: 1000001 cycles: 524766 (Simulation time: 0 hr 0 min 3 sec) 
+
+0:0:5
+-1:-1
+0:1:4
+-1:-1
+0:1:3
+-1:-1
+2:1:2
+0:-1
+0:1:2
+-1:-1
+0:1:1
+-1:-1
+1:1:1
+-1:-1
+1:1:1
+-1:-1
+1:1:1
+-1:-1
+0:1:1
+-1:-1
+1:2:1
+-1:-1
+2:1:1
+0:-1
+1:1:1
+-1:-1
+0:1:1
+-1:-1
+0:2:1
+-1:-1
+0:1:1
+-1:-1
+2:1:1
+0:-1
+1:1:1
+-1:-1
+2:0:1
+0:-1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+0:2:1
+-1:-1
+2:0:1
+0:-1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+1:3:1
+-1:-1
+0:1:1
+-1:-1
+1:1:1
+-1:1
+1:1:1
+-1:-1
+0:2:1
+-1:-1
+0:1:1
+-1:-1
+4:0:1
+1:-1
+1:1:1
+-1:-1
+0:1:1
+-1:-1
+2:0:1
+0:-1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+4:3:1
+1:-1
+1:2:1
+-1:-1
+1:1:1
+-1:-1
+0:1:1
+-1:-1
+1:1:1
+-1:-1
+0:1:1
+-1:-1
+0:0:1
+-1:-1
+0:2:1
+-1:-1
+0:1:1
+-1:-1
+0:2:1
+-1:-1
+5:2:1
+1:-1
+0:3:1
+-1:1
+2:1:1
+0:-1
+0:5:1
+-1:-1
+0:2:1
+-1:-1
+1:1:1
+-1:-1
+1:1:1
+-1:-1
+1:3:1
+-1:-1
+1:2:1
+-1:-1
+3:1:1
+0:-1
+0:1:1
+-1:-1
+1:1:1
+-1:-1
+2:1:1
+0:-1
+1:1:1
+-1:-1
+2:4:1
+0:-1
+1:1:1
+-1:-1
+1:2:1
+-1:-1
+1:4:1
+-1:-1
+4:0:1
+1:-1
+3:0:1
+0:-1
+2:1:1
+0:-1
+0:3:1
+-1:-1
+3:3:1
+0:1
+0:2:2
+-1:-1
+2:3:1
+0:-1
+3:3:1
+0:1
+4:2:2
+1:0
+2:3:3
+0:-1
+3:3:3
+0:0
+0:2:3
+-1:-1
+8:3:2
+2:-1
+0:0:2
+-1:-1
+13:3:1
+2:-1
+1:2:1
+-1:-1
+2:4:1
+0:-1
+0:3:1
+-1:-1
+0:1:1
+-1:1
+3:4:1
+0:-1
+5:2:1
+1:1
+5:1:2
+1:0
+0:1:3
+-1:-1
+0:3:2
+-1:0
+0:2:1
+-1:-1
+0:5:1
+-1:-1
+1:1:1
+-1:-1
+10:2:1
+2:-1
+2:3:1
+0:1
+10:3:2
+2:-1
+0:4:2
+-1:-1
+2:2:1
+0:1
+3:1:2
+0:0
+4:1:2
+1:0
+5:1:3
+1:0
+0:4:4
+-1:0
+0:2:3
+-1:-1
+6:3:2
+1:-1
+9:2:2
+2:-1
+10:2:2
+2:0
+14:4:3
+2:0
+0:4:4
+-1:-1
+1:3:3
+-1:-1
+7:0:2
+1:-1
+7:3:2
+1:-1
+0:1:2
+-1:-1
+0:1:1
+-1:-1
+2:1:1
+0:-1
+0:1:1
+-1:-1
+3:4:1
+0:-1
+9:3:1
+2:-1
+0:3:1
+-1:-1
+0:3:1
+-1:1
+0:3:1
+-1:-1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+0:2:1
+-1:-1
+1:2:1
+-1:-1
+1:2:1
+-1:-1
+2:2:1
+0:-1
+2:2:1
+0:1
+3:2:2
+0:0
+0:1:2
+-1:-1
+0:1:1
+-1:-1
+0:5:1
+-1:-1
+3:1:1
+0:-1
+0:3:1
+-1:-1
+0:1:1
+-1:-1
+2:3:1
+0:-1
+2:3:1
+0:1
+1:3:2
+-1:0
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+2:2:1
+0:1
+5:3:2
+1:-1
+0:3:2
+-1:-1
+0:2:1
+-1:-1
+0:2:1
+-1:1
+1:1:1
+-1:-1
+0:2:1
+-1:-1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+0:1:1
+-1:-1
+1:1:1
+-1:-1
+Heartbeat CPU 0 instructions: 10000002 cycles: 16568967 heartbeat IPC: 0.603538 cumulative IPC: 0.56095 (Simulation time: 0 hr 0 min 41 sec) 
+Finished CPU 0 instructions: 10000001 cycles: 17774410 cumulative IPC: 0.562607 (Simulation time: 0 hr 0 min 45 sec) 
+
+CPU 0 Branch Prediction Accuracy: 98.8915% MPKI: 1.2372 Average ROB Occupancy at Mispredict: 259.027
+
+ChampSim completed all CPUs
+
+Region of Interest Statistics
+
+CPU 0 cumulative IPC: 0.562607 instructions: 10000001 cycles: 17774410
+L1D TOTAL     ACCESS:    2965535  HIT:    2964945  MISS:        590
+L1D LOAD      ACCESS:    1389697  HIT:    1389585  MISS:        112
+L1D RFO       ACCESS:     389671  HIT:     389448  MISS:        223
+L1D PREFETCH  ACCESS:    1186167  HIT:    1185912  MISS:        255
+L1D WRITEBACK ACCESS:          0  HIT:          0  MISS:          0
+L1D PREFETCH  REQUESTED:    1293812  ISSUED:    1293575  USEFUL:        191  USELESS:         17
+L1D AVERAGE MISS LATENCY: 410699 cycles
+L1I TOTAL     ACCESS:    3649293  HIT:    3649018  MISS:        275
+L1I LOAD      ACCESS:    3649293  HIT:    3649018  MISS:        275
+L1I RFO       ACCESS:          0  HIT:          0  MISS:          0
+L1I PREFETCH  ACCESS:          0  HIT:          0  MISS:          0
+L1I WRITEBACK ACCESS:          0  HIT:          0  MISS:          0
+L1I PREFETCH  REQUESTED:          0  ISSUED:          0  USEFUL:          0  USELESS:          0
+L1I AVERAGE MISS LATENCY: 123.178 cycles
+L2C TOTAL     ACCESS:       1304  HIT:        432  MISS:        872
+L2C LOAD      ACCESS:        366  HIT:        112  MISS:        254
+L2C RFO       ACCESS:        223  HIT:         15  MISS:        208
+L2C PREFETCH  ACCESS:        689  HIT:        279  MISS:        410
+L2C WRITEBACK ACCESS:         26  HIT:         26  MISS:          0
+L2C PREFETCH  REQUESTED:       1020  ISSUED:       1008  USEFUL:        217  USELESS:          0
+L2C AVERAGE MISS LATENCY: 179.602 cycles
+LLC TOTAL     ACCESS:        872  HIT:          0  MISS:        872
+LLC LOAD      ACCESS:        213  HIT:          0  MISS:        213
+LLC RFO       ACCESS:        208  HIT:          0  MISS:        208
+LLC PREFETCH  ACCESS:        451  HIT:          0  MISS:        451
+LLC WRITEBACK ACCESS:          0  HIT:          0  MISS:          0
+LLC PREFETCH  REQUESTED:          0  ISSUED:          0  USEFUL:          0  USELESS:          0
+LLC AVERAGE MISS LATENCY: 146.419 cycles
+Major fault: 0 Minor fault: 103
+CPU 0 L2C next line prefetcher final stats
+
+DRAM Statistics
+ CHANNEL 0
+ RQ ROW_BUFFER_HIT:        352  ROW_BUFFER_MISS:        520
+ DBUS_CONGESTED:        236
+ WQ ROW_BUFFER_HIT:          0  ROW_BUFFER_MISS:          0  FULL:          0
+
+ AVG_CONGESTED_CYCLE: 5

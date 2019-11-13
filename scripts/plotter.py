@@ -31,29 +31,37 @@ cnt = 0
 for key, value in sorted(d.iteritems()) :
 	cnt = cnt + 1
 	print key
-	prefetchers = ['default','next-line','berti','bingo','bouquet','enhancing','multi-lop','pangloss','sangam','sangam++','t-skid']
-	x = [1,2,3,4,5,6,7,8,9,10]
+	prefetchers = ['default','dsp','next-line','berti','bingo','bouquet','enhancing','multi-lop','pangloss','sangam','sangam++','t-skid','ipcp++']
+	x = [1,2,3,4,5,6,7,8,9,10,11,12]
 	min_value = min(value[1:])
 	max_value = max(value[1:])
 	# avg_value = sum(value)/len(value)
 	# min_value = min_value - 0.001
 	# min_value = round(min_value, 2) - 0.001
 	# max_value = max_value + 0.01
-	print min_value, max_value
-	print value
+	# print min_value, max_value
+	# print value
 	fig = plt.figure()
 	ax = plt.axes()
 	# axes = plt.gca()
 	# axes.set_xlim([xmin,xmax])
 	ax.set_ylim([min_value,max_value])
-	plt.xticks(x, prefetchers[1:],rotation=30, fontsize=8)
+	plt.xticks(x, prefetchers[1:],rotation=30, fontsize=10)
+	plt.yticks(fontsize=10)
 	# plt.yticks(np.arange(min_value, max_value, 0.001))
-	plt.bar(x, value[1:], width=0.3)
+	barlist = plt.bar(x, value[1:], width=0.3,color='#FA8072')
+	barlist[11].set_color('#9B59B6')
+	barlist[0].set_color('#9B59B6')
 	# plt.xlabel('Prefetchers from DPC3',fontsize=14)
 	if cnt%4 == 1:
-		plt.ylabel('Cumulative IPC',fontsize=14)
+		plt.ylabel('Cumulative IPC',fontsize=16)
 	# title = "Benchmark: "+key
 	# fig.suptitle(title,fontsize=15)
 	# plt.show()
-	plt.savefig(key+'.pdf',bbox_inches = "tight")
+	plt.savefig(key[:3]+'.pdf',bbox_inches = "tight")
 	# sys.exit(0)
+
+
+# >>> barlist=plt.bar([1,2,3,4], [1,2,3,4])
+# >>> barlist[0].set_color('r')
+# >>> plt.show()
