@@ -9,64 +9,6 @@ LLC ways: 16
 Off-chip DRAM Size: 4096 MB Channels: 1 Width: 64-bit Data Rate: 3200 MT/s
 
 CPU 0 runs /home/light/7th-Sem/cs622/project/ChampSim/dpc3_traces/648.exchange2_s-1699B.champsimtrace.xz
-4:20:4
-1:-1
-2:13:4
-0:-1
-7:21:4
-1:0
-0:15:5
--1:-1
-3:5:4
-0:0
-0:8:4
--1:0
-6:4:3
-1:-1
-9:12:3
-2:0
-6:5:4
-1:1
-0:1:5
--1:-1
-3:4:4
-0:0
-10:5:4
-2:0
-0:1:5
--1:-1
-0:2:4
--1:0
-1:0:3
--1:-1
-7:1:2
-1:-1
-8:5:2
-2:1
-
-Warmup complete CPU 0 instructions: 1000001 cycles: 427698 (Simulation time: 0 hr 0 min 2 sec) 
-
-0:1:4
--1:-1
-14:1:3
-2:-1
-14:1:3
-2:0
-14:0:4
-2:-1
-14:1:4
-2:0
-1:1:5
--1:-1
-1:0:4
--1:-1
-8:1:3
-2:-1
-0:1:3
--1:-1
-1:1:2
--1:0
-Heartbeat CPU 0 instructions: 10000001 cycles: 6001322 heartbeat IPC: 1.6663 cumulative IPC: 1.61475 (Simulation time: 0 hr 0 min 22 sec) 
 Finished CPU 0 instructions: 10000001 cycles: 6203408 cumulative IPC: 1.61202 (Simulation time: 0 hr 0 min 24 sec) 
 
 CPU 0 Branch Prediction Accuracy: 97.1379% MPKI: 3.8658 Average ROB Occupancy at Mispredict: 176.515
